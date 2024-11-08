@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Redirect Page</title>
+  <script type="text/javascript">
+
+    /**
+     * map link like: http://[::]:8000/?url=message%3A//%253c80d1fc1b-4053-4489-8ae7-6349a121116c%40in.tum.de%253e 
+     * to uri: message://%3c80d1fc1b-4053-4489-8ae7-6349a121116c@in.tum.de%3e
+     * and open the uri in the same tab
+     */
+     document.addEventListener("DOMContentLoaded", function() {
+      // Get the URL parameters
+      var urlParams = new URLSearchParams(window.location.search);
+      // Get the 'url' parameter
+      var encodedUri = urlParams.get('url');
+      console.log('encodedUri=', encodedUri);
+      window.open(encodedUri, '_self');
+    });
+  </script>
+</head>
+<body>
+  <h1>Redirecting...</h1>
+</body>
+</html>
