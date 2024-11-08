@@ -19,5 +19,5 @@ ENCODED_URI=$(python3 -c "import urllib.parse; print(urllib.parse.quote('''$LOCA
 # Construct the full URL
 FULL_URL="${BASE_URL}${ENCODED_URI}"
 
-# Output the full URL
-echo "Encoded URL: ${FULL_URL}"
+# return the full URL
+echo $FULL_URL
