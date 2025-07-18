@@ -15,7 +15,33 @@
       // Get the 'url' parameter
       var encodedUri = urlParams.get('url');
       console.log('encodedUri=', encodedUri);
-      window.open(encodedUri, '_self');
+      
+      if (encodedUri) {
+        // Create an invisible iframe to trigger the URI
+        var iframe = document.createElement('iframe');
+        iframe.style.display = 'none';
+        iframe.src = encodedUri;
+        document.body.appendChild(iframe);
+        
+        // Try multiple methods to close the tab
+        setTimeout(function() {
+          // Method 1: Try to close normally
+          if (window.close()) {
+            return;
+          }
+          
+          // Method 2: Try to navigate back and close
+          if (window.history.length > 1) {
+            window.history.back();
+            setTimeout(window.close, 100);
+          } else {
+            // Method 3: Show user instructions if auto-close fails
+            document.body.innerHTML = '<h1>✓ App launched!</h1><p>You can now close this tab manually.</p><button onclick="window.close()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">Close Tab</button>';
+          }
+        }, 1000);
+      } else {
+        document.body.innerHTML = '<h1>No URL parameter found</h1>';
+      }
     });
   </script>
 </head>
