@@ -33,7 +33,7 @@
           // Method 2: Try to navigate back and close
           if (window.history.length > 1) {
             window.history.back();
-            setTimeout(window.close, 100);
+            setTimeout(window.close, 300);
           } else {
             // Method 3: Show user instructions if auto-close fails
             document.body.innerHTML = '<h1>✓ App launched!</h1><p>You can now close this tab manually.</p><button onclick="window.close()" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">Close Tab</button>';
