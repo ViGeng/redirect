@@ -6,13 +6,13 @@
 # @raycast.mode compact
 
 # Optional parameters:
-# @raycast.icon 🔗
+# @raycast.icon 📨
 # @raycast.packageName Mail
 
 # Documentation:
 # @raycast.description Copies the foreground Mail deeplink and converts it to a redirect link
-# @raycast.author Merged Script
-# @raycast.authorURL https://github.com/jesse-c
+# @raycast.author ViGeng
+# @raycast.authorURL https://raycast.com/vigeng
 
 # Base URL for redirect service
 set baseURL to "http://wgeng.site/redirect?url="
