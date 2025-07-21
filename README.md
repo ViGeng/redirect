@@ -46,6 +46,11 @@ message://%3c80d1fc1b-4053xxxx16c@in.tum.de%3e
 
 Make sure to properly URL-encode your target URI when using as the `url` parameter.
 
+## Roapmap
+
+- [ ] page icon
+- [ ] don't close tap when prompting permissions
+
 ---
 
 *Perfect for embedding deep links in Notion, documentation, or any web platform that supports HTTP links but not custom URI schemes.*
